@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  overflow: hidden;
+  min-height: 100vh;
+  cursor: none;
+}
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.row {
+  display: inline-flex;
+  margin-top: -32px;
+  margin-left: -50px;
+}
+.hexagon {
+  position: relative;
+  width: 100px;
+  height: 110px;
+  margin: 1px;
+  transition: 2s;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(
+    90deg,
+    rgba(18, 17, 19, 1) 50%,
+    rgba(0, 0, 0, 1) 50%
+  );
+  mix-blend-mode: hard-light;
+}
+.hexagon:hover {
+  transition: 0s;
+  /* background: lime; */
+}
+.row:nth-child(even) {
+  margin-left: 1px;
+}
+.cursor {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  animation: anim 2s linear infinite;
+  visibility: hidden;
+  transition: 0.1s;
+  transform: translate(-50%, -50%);
+}
+@keyframes anim {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+body:hover .cursor {
+  background: radial-gradient(
+    circle,
+    rgba(0, 225, 0, 1) 23%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  visibility: visible;
+}
+p {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: aqua;
+
+  z-index: 10;
+  opacity: 1;
+  position: absolute;
+  animation: anime 4s ease 1;
+  transition: animation ease;
+
+  filter: drop-shadow(3px 3px 5px aqua);
+}
+/* @keyframes anime {
+  100% {
+    font-size: 50px;
+    position: absolute;
+    text-align: center;
+    opacity: 1;
+    color: pink;
+  }
+} */

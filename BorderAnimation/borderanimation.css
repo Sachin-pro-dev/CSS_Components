@@ -1,0 +1,49 @@
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(45deg, purple, indigo, aqua);
+}
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #000;
+  /* background: pink; */
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box h1 {
+  /* color: #38ed38; */
+  color: transparent;
+  background: linear-gradient(45deg, lime 30%, blue 70%);
+  -webkit-background-clip: text;
+  font-size: 4rem;
+  position: relative;
+  z-index: 1;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  background: #000;
+  inset: 10px;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 140%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

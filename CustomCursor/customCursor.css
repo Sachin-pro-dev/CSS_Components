@@ -1,0 +1,28 @@
+body {
+  background: linear-gradient(454deg, purple, indigo, teal);
+}
+.cursor {
+  /* box-shadow: 0 0 15px #00000033; */
+  position: absolute;
+  width: 40px;
+  background: #ffffff0d;
+
+  border: 1px solid #0000001a;
+  /* border-radius: 50%; */
+  box-shadow: 0 0 20px aqua;
+  backdrop-filter: blur(1.5px);
+  filter: drop-shadow(1px 1px 10px aqua);
+  transform: translate(-50%, -50%);
+  border-radius: 55%;
+  aspect-ratio: 1;
+  z-index: 9;
+  animation: anime 0.5s ease infinite;
+
+
+}
+.cursor:active {
+  width: 45px;
+  box-shadow: 0 0 20px lime;
+  transform: translate(-50%, -50%);
+}
+

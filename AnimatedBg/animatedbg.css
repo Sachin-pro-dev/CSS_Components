@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  min-height: 100vh;
+  background: #000;
+}
+section {
+  height: 100vh;
+}
+span {
+  position: absolute;
+  pointer-events: none;
+  background: #fff;
+  animation: animate 3s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: scale(0) translate(0) rotate(0deg);
+    /* background: radial-gradient(black, aqua); */
+  }
+  10% {
+    /* background: radial-gradient(aqua, black); */
+    opacity: 1;
+  }
+  90% {
+    transform: rotatex(90);
+    /* background: radial-gradient(black, aqua); */
+    /* translate: 500px; */
+  }
+  100% {
+    transform: scale(0.5) translate(-500%) rotate(360deg);
+    opacity: 0;
+    /* background: radial-gradient(aqua, black); */
+  }
+}
